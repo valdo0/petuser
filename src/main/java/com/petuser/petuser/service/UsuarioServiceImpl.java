@@ -14,7 +14,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     public UsuarioServiceImpl(){
         usuarios.add(new Usuario(1, "Sebastián", "Valdivia", "se.valdivia@duocuc.cl", "12345678", "asd #123", "Dueño de Mascota"));
-        usuarios.add(new Usuario(0, null, null, null, null, null, null));
+        usuarios.add(new Usuario(2, "Valentina", "Marchant", "valentina.marchant@gmail.com", "123456678", "asd #123","Conductor de Transporte Pet-Friendly"));
+        usuarios.add(new Usuario(3, "Andres", "Valdivia", "andres.valdivia@gmail.com", "123456789", "asd #123", "Dueño de Mascota"));
     }
     @Override
     public List<Usuario> getAllUsuarios() {
