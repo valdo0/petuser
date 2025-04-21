@@ -27,7 +27,7 @@ public class UsuarioPatchRequest {
     private String direccion;
 
 
-    @Size(min=8, max=20)
+    @Size(min=8, max=40)
     private String rol;
 
     private String password;
