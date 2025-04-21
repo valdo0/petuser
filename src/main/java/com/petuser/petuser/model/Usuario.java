@@ -44,7 +44,7 @@ public class Usuario {
     private String direccion;
 
     @NotNull
-    @Size(min=8, max=20)
+    @Size(min=8, max=40)
     private String rol;
 
     @NotNull
