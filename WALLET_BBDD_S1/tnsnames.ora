@@ -1,0 +1,12 @@
+samjnvv4v08jp30q_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=ge531e08fa22ec0_samjnvv4v08jp30q_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+samjnvv4v08jp30q_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=ge531e08fa22ec0_samjnvv4v08jp30q_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+samjnvv4v08jp30q_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=ge531e08fa22ec0_samjnvv4v08jp30q_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+samjnvv4v08jp30q_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=ge531e08fa22ec0_samjnvv4v08jp30q_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+samjnvv4v08jp30q_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=ge531e08fa22ec0_samjnvv4v08jp30q_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+
