@@ -1,0 +1,13 @@
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/PetuserApplication.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/api/request/UsuarioCreateRequest.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/api/request/UsuarioLoginRequest.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/api/request/UsuarioPatchRequest.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/api/response/UsuarioGetResponse.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/controller/UsuarioController.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/exceptionHandler/DatabaseTransactionException.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/exceptionHandler/GlobalExceptionHandler.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/exceptionHandler/ResourceNotFoundException.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/model/Usuario.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/repository/UsuarioRepository.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/service/UsuarioService.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/main/java/com/petuser/petuser/service/UsuarioServiceImpl.java

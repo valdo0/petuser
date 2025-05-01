@@ -1,0 +1,15 @@
+com/petuser/petuser/api/request/UsuarioLoginRequest.class
+com/petuser/petuser/exceptionHandler/GlobalExceptionHandler.class
+com/petuser/petuser/exceptionHandler/DatabaseTransactionException.class
+com/petuser/petuser/repository/UsuarioRepository.class
+com/petuser/petuser/model/Usuario.class
+com/petuser/petuser/PetuserApplication.class
+com/petuser/petuser/api/request/UsuarioPatchRequest.class
+com/petuser/petuser/service/UsuarioServiceImpl.class
+com/petuser/petuser/api/response/UsuarioGetResponse.class
+com/petuser/petuser/exceptionHandler/ResourceNotFoundException.class
+com/petuser/petuser/api/response/UsuarioGetResponse$UsuarioGetResponseBuilder.class
+com/petuser/petuser/api/request/UsuarioCreateRequest.class
+com/petuser/petuser/service/UsuarioService.class
+com/petuser/petuser/controller/UsuarioController.class
+com/petuser/petuser/model/Usuario$UsuarioBuilder.class
