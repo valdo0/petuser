@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +20,10 @@ import jakarta.persistence.Table;
 @Builder
 
 @Entity
-@Table(name = "usuarios")
+@Table(
+    name = "usuarios",
+    uniqueConstraints = @UniqueConstraint(columnNames = "email")
+)
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
