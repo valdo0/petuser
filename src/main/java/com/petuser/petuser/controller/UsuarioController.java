@@ -41,8 +41,17 @@ public class UsuarioController {
         List<UsuarioGetResponse> usuarios = usuarioService.getAllUsuarios();
         logger.info("Usuarios: {}", usuarios.size());
         List<EntityModel<UsuarioGetResponse>> usuarioModels = usuarios.stream()
-                .map(usuario -> EntityModel.of(usuario,
-                        linkTo(methodOn(UsuarioController.class).getUsuarioById(usuario.getId())).withSelfRel()))
+                .map(usuario -> {
+                    EntityModel<UsuarioGetResponse> usuarioModel = EntityModel.of(usuario,
+                            linkTo(methodOn(UsuarioController.class).getUsuarioById(usuario.getId())).withSelfRel());
+                    usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUser(usuario.getId(), null)).withRel("update"));
+                    usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUsuario(usuario.getId(), null)).withRel("patch"));
+                    usuarioModel.add(linkTo(methodOn(UsuarioController.class).deleteUsuario(usuario.getId())).withRel("delete"));
+                    usuarioModel.add(linkTo(methodOn(UsuarioController.class).login(null)).withRel("login"));
+                    usuarioModel.add(linkTo(methodOn(UsuarioController.class).getUsuarioById(usuario.getId())).withRel("getById"));
+                    return usuarioModel;
+                })
+                        
                 .collect(Collectors.toList());
         return new ResponseEntity<>(usuarioModels, HttpStatus.OK);
     }
@@ -68,6 +77,7 @@ public class UsuarioController {
         EntityModel<UsuarioGetResponse> usuarioModel = EntityModel.of(usuarioResponse,
                 linkTo(methodOn(UsuarioController.class).getAllUsuarios()).withRel("usuarios"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUser(usuarioResponse.getId(), null)).withRel("update"));
+        usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUsuario(usuarioResponse.getId(), null)).withRel("patch"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).deleteUsuario(usuarioResponse.getId())).withRel("delete"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).login(null)).withRel("login"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).createUsuario(null)).withSelfRel());
@@ -88,6 +98,7 @@ public class UsuarioController {
                 linkTo(methodOn(UsuarioController.class).getAllUsuarios()).withRel("usuarios"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).getUsuarioById(id)).withSelfRel());
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUser(id, null)).withRel("update"));
+        usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUsuario(id, null)).withRel("patch"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).deleteUsuario(id)).withRel("delete"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).login(null)).withRel("login"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).createUsuario(null)).withRel("create"));
@@ -105,6 +116,12 @@ public class UsuarioController {
         logger.info("User logged in: {}", usuarioResponse);
         EntityModel<UsuarioGetResponse> usuarioModel = EntityModel.of(usuarioResponse,
                 linkTo(methodOn(UsuarioController.class).login(null)).withSelfRel());
+                usuarioModel.add(linkTo(methodOn(UsuarioController.class).getUsuarioById(usuarioResponse.getId())).withRel("getById"));
+                usuarioModel.add(linkTo(methodOn(UsuarioController.class).getAllUsuarios()).withRel("usuarios"));
+                usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUser(usuarioResponse.getId(), null)).withRel("update"));
+                usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUsuario(usuarioResponse.getId(), null)).withRel("patch"));
+                usuarioModel.add(linkTo(methodOn(UsuarioController.class).deleteUsuario(usuarioResponse.getId())).withRel("delete"));
+                usuarioModel.add(linkTo(methodOn(UsuarioController.class).createUsuario(null)).withRel("create"));
 
         return new ResponseEntity<>(usuarioModel, HttpStatus.OK);
     }
@@ -143,6 +160,7 @@ public class UsuarioController {
                 linkTo(methodOn(UsuarioController.class).getAllUsuarios()).withRel("usuarios"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).getUsuarioById(id)).withRel("getById"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUser(id, null)).withSelfRel());
+        usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUsuario(id, null)).withRel("patch"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).deleteUsuario(id)).withRel("delete"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).login(null)).withRel("login"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).createUsuario(null)).withRel("create"));
@@ -174,6 +192,7 @@ public class UsuarioController {
                 linkTo(methodOn(UsuarioController.class).getAllUsuarios()).withRel("usuarios"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).getUsuarioById(id)).withRel("getById"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUsuario(id, null)).withSelfRel());
+        usuarioModel.add(linkTo(methodOn(UsuarioController.class).updateUser(id, null)).withRel("update"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).deleteUsuario(id)).withRel("delete"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).login(null)).withRel("login"));
         usuarioModel.add(linkTo(methodOn(UsuarioController.class).createUsuario(null)).withRel("create"));
