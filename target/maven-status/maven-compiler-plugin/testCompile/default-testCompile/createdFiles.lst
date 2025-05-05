@@ -1,1 +1,4 @@
+com/petuser/petuser/repository/UsuarioRepositoryTest.class
 com/petuser/petuser/PetuserApplicationTests.class
+com/petuser/petuser/controller/UsuarioControllerTest.class
+com/petuser/petuser/service/UsuarioServiceTest.class

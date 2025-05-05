@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.petuser.petuser.repository.UsuarioRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.520 s -- in com.petuser.petuser.repository.UsuarioRepositoryTest

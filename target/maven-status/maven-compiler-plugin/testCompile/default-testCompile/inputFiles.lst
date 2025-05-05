@@ -1,1 +1,4 @@
 /Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/test/java/com/petuser/petuser/PetuserApplicationTests.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/test/java/com/petuser/petuser/controller/UsuarioControllerTest.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/test/java/com/petuser/petuser/repository/UsuarioRepositoryTest.java
+/Users/sebastianvaldiviavillagra/Desktop/proyectos/petuser/src/test/java/com/petuser/petuser/service/UsuarioServiceTest.java
