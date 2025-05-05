@@ -83,7 +83,8 @@ public class UsuarioServiceTest {
 
         when(usuarioRepositoryMock.existsById(1L)).thenReturn(true);
         doNothing().when(usuarioRepositoryMock).deleteById(1L);
-        usuarioService.deleteUsuario(1L);
+        boolean isDeleted =usuarioService.deleteUsuario(1L);
+        assertTrue(isDeleted);
         verify(usuarioRepositoryMock, times(1)).existsById(1L);
         verify(usuarioRepositoryMock, times(1)).deleteById(1L);
     }
