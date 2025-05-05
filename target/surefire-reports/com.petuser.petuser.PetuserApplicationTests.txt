@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.petuser.petuser.PetuserApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.000 s -- in com.petuser.petuser.PetuserApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.635 s -- in com.petuser.petuser.PetuserApplicationTests
